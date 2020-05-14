@@ -1,0 +1,23 @@
+{
+    "name": "ponyfire/ponyfire",
+    "description": "PonyFire is a PHP framework with some feature",
+    "type": "project",
+    "keywords": ["framework", "php7"],
+    "require": {
+        "php": "^7.4",
+        "ponyfire/framework": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gede Dhanu Purnayasa",
+            "email": "dhanuprys@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app\\"
+        }
+    }
+}
