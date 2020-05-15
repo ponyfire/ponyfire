@@ -11,3 +11,6 @@ defined('STORAGE_PATH') || define('STORAGE_PATH', BASE_PATH . 'storage' . DIRECT
 
 // Base Path /path/to/ponyfire/<front_controller>
 defined('FC_PATH') || define('FC_PATH', BASE_PATH . 'public' . DIRECTORY_SEPARATOR);
+
+// Mode aplikasi berjalan
+defined('APP_ENVIRONMENT') || define('APP_ENVIRONMENT', env('ENVIRONMENT', 'production'));

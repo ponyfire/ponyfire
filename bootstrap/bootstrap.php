@@ -1,10 +1,13 @@
 <?php
 
-// Load konstanta-konstanta framework
-require_once __DIR__ . DIRECTORY_SEPARATOR . 'constants.php';
-
 // Load autoload composer
 require_once BASE_PATH . 'vendor/autoload.php';
+
+// Set environment
+\PonyFire\Env\Loader::load(__DIR__);
+
+// Load konstanta-konstanta framework
+require_once __DIR__ . DIRECTORY_SEPARATOR . 'constants.php';
 
 // Menyiapkan error handler
 $whoops = new \Whoops\Run();
@@ -30,7 +33,7 @@ if (PONYFIRE_STARTED_AT === 'http')
 elseif (PONYFIRE_STARTED_AT === 'cli')
 {
     // Jika ingin menggunakan error handler yang berbeda, ganti nama kelas dibawah
-    $whoops->pushHandler(new \PonyFire\View\Handler\ConsoleError());
+    (new \NunoMaduro\Collision\Provider())->register();
 }
 
 // Mendaftarkan error handler
