@@ -1,6 +1,6 @@
 <?php
 
-use PonyFire\Routing\Route;
+use PonyFire\Router\Route;
 use PonyFire\Http\Request;
 
 Route::get('/', function (Request $request) {
